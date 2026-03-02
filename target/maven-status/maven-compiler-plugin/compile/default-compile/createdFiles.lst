@@ -1,0 +1,13 @@
+com\careerconnect\controller\InquiryController.class
+com\careerconnect\service\UserServiceImpl.class
+com\careerconnect\dao\CollegeDao.class
+com\careerconnect\controller\AuthController.class
+com\careerconnect\controller\CollegeController.class
+com\careerconnect\controller\CourseController.class
+com\careerconnect\model\Users.class
+com\careerconnect\service\UserService.class
+com\careerconnect\dao\UserDao.class
+com\careerconnect\service\CollegeServiceImpl.class
+com\careerconnect\model\College.class
+com\careerconnect\service\CollegeService.class
+com\careerconnect\controller\StudentController.class
