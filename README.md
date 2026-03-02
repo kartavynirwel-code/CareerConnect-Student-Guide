@@ -20,58 +20,38 @@ This project demonstrates full-stack development skills and cloud deployment rea
 
 🛠️ Tech Stack
 
-Frontend
-
+Frontend:
 React.js
-
 HTML
-
 CSS
 
-
-Backend
-
+Backend:
 Spring Boot
-
 Spring MVC
-
 Spring Data JPA
-
 Hibernate
 
-Database
-
+Database:
 MySQL
-
 AWS RDS
 
-Cloud
-
+Cloud:
 AWS EC2
-
 AWS RDS
 
-Tools
-
+Tools:
 Git
-
 GitHub
-
 Maven
 
-✨ Features
-
+✨ Features:
 Student Registration & Login
-
 Career exploration by stream
-
 College search functionality
-
 REST API based backend
-
 Layered architecture (Controller → Service → Repository)
 
-Cloud deployable setup
+Cloud deployable setup:
 
 🏗️ Architecture
 
@@ -90,33 +70,28 @@ careerconnect
 └── database
 
 ⚙️ How To Run The Project
-1️⃣ Clone Repository
+1️⃣ Clone Repository:
 
 git clone https://github.com/kartavynirwel-code/your-repo-name.git
 
-2️⃣ Run Backend
+2️⃣ Run Backend:
 
-cd backend
+cd backend:
 mvn spring-boot:run
 
-3️⃣ Run Frontend
+3️⃣ Run Frontend:
 
 cd frontend
 npm install
 npm start
 
-🔮 Future Improvements
-
+🔮 Future Improvements:
 AI-based career recommendation
-
 Skill assessment test
-
 Email notifications
-
 Advanced filtering
 
-👨‍💻 Developer
-
+👨‍💻 Developer:
 Kartavya Nirwel
 Java Full Stack Developer
 AWS Certified Cloud Practitioner
