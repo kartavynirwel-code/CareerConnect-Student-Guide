@@ -33,6 +33,8 @@
             <span class="nav-icon">📚</span><span>Courses</span></button></li>
         <li><button class="nav-link" onclick="goToInquiry()">
             <span class="nav-icon">📩</span><span>Inquire</span></button></li>
+        <li><button class="nav-link" onclick="window.location.href='quiz'">
+            <span class="nav-icon">🧠</span><span>Career Quiz</span></button></li>
     </ul>
 
     <div class="sidebar-footer">

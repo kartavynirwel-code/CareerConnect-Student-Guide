@@ -1,9 +1,3 @@
-<%-- 
-    Document   : error
-    Created on : 3 Mar 2026, 1:30:46 am
-    Author     : Kartavya
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page isELIgnored="false"%>
 <!DOCTYPE html>
@@ -247,16 +241,11 @@
 
     <script>
         (function() {
-            // Optional: simulate smooth "back to home" demo behaviour.
-            // Because this is a demo and there is no actual index.html,
-            // we use a gentle fallback with a polite message.
+
             window.simulateHome = function(event) {
-                event.preventDefault();  // prevent the '#' from jumping
-                // In a real deployment, you'd set the href to your actual home URL.
-                // For this demo, we show a friendly alert, but still give a visual click effect.
+                event.preventDefault();
                 alert("🚀 Back to home clicked");
-                // optionally you can uncomment for actual navigation (for demo only, it reloads page)
-               window.location.href = 'login';   // <-- real redirect
+               window.location.href = 'login';
             };
 
             // Button 2: reload page with a tiny extra flair
@@ -272,12 +261,9 @@
                     window.location.reload();
                 }, 200);
             };
-
-            // Also provide a secondary global to avoid any "undefined function" if buttons tapped.
         })();
     </script>
 
-    <!-- add a fallback for really old browsers (no JS) but we keep it unobtrusive -->
     <noscript>
         <div style="background:#fff3cd; padding:1rem; border-radius:30px; margin-top:1rem;">
             ⚠️ JavaScript is off — buttons will act as regular links.

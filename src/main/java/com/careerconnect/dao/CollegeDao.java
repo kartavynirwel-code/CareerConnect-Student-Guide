@@ -32,4 +32,15 @@ public class CollegeDao {
     public void save(College college) {
         hibernateTemplate.saveOrUpdate(college);
     }
-}
+    public List<College> getCollegesByStream(String stream) {
+
+        String query = "from College where stream = :stream";
+
+        List<College> colleges = (List<College>) hibernateTemplate.findByNamedParam(
+                query,
+                "stream",
+                stream
+        );
+        return colleges;
+    }
+    }

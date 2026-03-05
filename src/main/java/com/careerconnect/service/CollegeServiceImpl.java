@@ -23,10 +23,8 @@ public class CollegeServiceImpl implements CollegeService {
         if (q == null || q.trim().isEmpty()) return getAllColleges();
         return collegeDao.searchByNameOrCity(q.trim());
     }
-
     @Override
-    public int countColleges() {
-        List<College> all = getAllColleges();
-        return (all == null) ? 0 : all.size();
+    public List<College> getCollegesByStream(String stream){
+        return collegeDao.getCollegesByStream(stream);
     }
 }
