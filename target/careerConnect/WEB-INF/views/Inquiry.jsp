@@ -6,9 +6,16 @@
     <meta charset="UTF-8">
     <title>Send Inquiry – CareerConnect</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/inquiry.css">
+    <script>
+        setTimeout(function(){
+            let toast = document.querySelector('.toast');
+            if(toast){
+                toast.style.display = 'none';
+            }
+        },3000);
+    </script>
 </head>
 <body>
-
 <!-- SIDEBAR -->
 <aside class="sidebar">
 
@@ -40,7 +47,7 @@
     </nav>
 
     <div class="sidebar-bottom">
-        <a href="${pageContext.request.contextPath}/logout" class="nav-link">
+        <a href="${pageContext.request.contextPath}/login#" class="nav-link">
             Logout
         </a>
     </div>
@@ -62,6 +69,17 @@
         <div class="section-title">College Inquiry Form</div>
 
         <div class="form-wrap">
+            <c:if test="${not empty success}">
+                <div class="toast success">
+                        ${success}
+                </div>
+            </c:if>
+
+            <c:if test="${not empty error}">
+                <div class="toast error">
+                        ${error}
+                </div>
+            </c:if>
 
             <form action="${pageContext.request.contextPath}/submitInquiry" method="post">
 
@@ -89,13 +107,13 @@
 
                     <div class="field-group">
                         <label>Select College</label>
-                        <select name="collegeId" required>
+                        <select name="college_id" required>  <!-- Changed from collegeId to college_id -->
                             <option value="">-- Choose College --</option>
 
                             <!-- Dynamic Colleges -->
                             <c:forEach var="college" items="${colleges}">
                                 <option value="${college.id}">
-                                    ${college.name} - ${college.city}
+                                        ${college.name} - ${college.city}
                                 </option>
                             </c:forEach>
 
@@ -112,10 +130,10 @@
 
                     <div class="field-group">
                         <label>Admission Year</label>
-                        <select name="year">
-                            <option>2026</option>
-                            <option>2027</option>
-                            <option>2028</option>
+                        <select name="admission_year">  <!-- Changed from year to admission_year -->
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
                         </select>
                     </div>
                 </div>

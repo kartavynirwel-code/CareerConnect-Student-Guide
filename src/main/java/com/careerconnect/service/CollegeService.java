@@ -7,4 +7,6 @@ public interface CollegeService {
     public List<College> getAllColleges();
     List<College> searchColleges(String q);
     int countColleges();
+
+
 }

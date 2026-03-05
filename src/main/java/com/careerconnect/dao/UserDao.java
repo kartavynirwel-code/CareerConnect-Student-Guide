@@ -2,6 +2,7 @@ package com.careerconnect.dao;
 
 import java.util.List;
 
+import com.careerconnect.model.Admin;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -43,5 +44,23 @@ public class UserDao {
         return 0;
     }
     return (int) hibernateTemplate.save(user);
+    }
+
+    public int verifyAdmin(Admin admin) {
+
+        String query = "from Admin where email=:email and password=:password";
+
+        List<Admin> list = (List<Admin>) this.hibernateTemplate.findByNamedParam(
+                query,
+                new String[]{"email", "password"},
+                new Object[]{admin.getEmail(), admin.getPassword()}
+        );
+
+        if(list.size() > 0){
+            return 1;
+        }
+        else{
+            return 0;
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.careerconnect.service;
 
+import com.careerconnect.model.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,4 +21,12 @@ public class UserServiceImpl implements UserService {
     public int registerUser(Users user) {
         return userDao.save(user);
     }
+
+    @Override
+    public int verifybyemailandpassword(Admin admin) {
+        return this.userDao.verifyAdmin(admin);
+    }
+
+
+
 }
